@@ -10,7 +10,6 @@ import applicationRoute from './routes/application.route.js'
 import { Job } from './models/job.model.js';
 import path  from 'path';
 
-
 // Import all models
 import { User } from "./models/user.model.js"; 
 import { Application } from "./models/application.model.js";
@@ -58,7 +57,8 @@ app.get('/home' ,(req,res)=>{
  
 
 
-
-
-export default app;
+const PORT = process.env.PORT||5000;
+app.listen(PORT, () => {
+console.log(`Server is running on port ${PORT}`   )},
+);
 
